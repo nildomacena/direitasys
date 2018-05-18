@@ -1,0 +1,33 @@
+<div class="container">
+  <h2 class="center-align">Login</h2>
+  <div class="row">
+    <div class="input-field col s12 m8 offset-m2">
+      <input id="email" type="text" class="validate" [(ngModel)]="email" >
+      <label for="email">Email</label>
+    </div>
+  </div>
+  <div class="row" *ngIf="signup">
+    <div class="input-field col s12 m8 offset-m2">
+      <input id="nome" type="text" class="validate" [(ngModel)]="nome" >
+      <label for="nome">Nome</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12 m8 offset-m2">
+      <input id="password" type="password" class="validate" [(ngModel)]="password" >
+      <label for="password">Senha</label>
+    </div>
+  </div>
+  <div class="row" *ngIf="signup">
+    <div class="input-field col s12 m8 offset-m2">
+      <input id="confirmPassword" type="password" class="validate" [(ngModel)]="confirmPassword" >
+      <label for="confirmPassword">Confirme a senha</label>
+    </div>
+  </div>
+  <div class="row">
+    <a class="waves-effect waves-light btn col s12 m6 offset-m3" (click)="enviar()" >{{signup? 'Solicitar acesso': 'login'}}</a>
+  </div>
+  <div class="row">
+    <a style="cursor: pointer;" (click)="solicitarAcesso()" class="col s12 center-align">{{signup? 'Fazer login': 'Solicitar acesso'}}</a>
+  </div>
+</div>
