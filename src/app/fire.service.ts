@@ -23,6 +23,11 @@ export class FireService {
   apagarNoticia(noticia):Promise<void>{
     return this.db.object(`noticias/${noticia.key}`).remove();
   }
+
+  salvarMeme(urlImagem){
+
+  }
+
   snapshotParaValue(lista: AngularFireAction<DatabaseSnapshot>[]){
     let novaLista = [];
     lista.map(objeto => {
